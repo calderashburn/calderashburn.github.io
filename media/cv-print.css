@@ -187,7 +187,7 @@ a:hover {
 }
 
 /* Compact A4 layout: use the page width and keep section spacing economical. */
-@page { size: A4; margin: 12mm; }
+@page { size: A4; margin: 0; }
 body { font-size: 8.5pt; line-height: 1.15em; }
 p, ul { left: 22%; width: 78%; }
 p { margin-bottom: 0.45em; }
@@ -203,3 +203,6 @@ body {
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
+
+/* Keep a printable inset inside the document instead of browser margin boxes. */
+body { margin: 0; padding: 12mm; box-sizing: border-box; }
