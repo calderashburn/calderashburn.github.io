@@ -197,3 +197,9 @@ h2 { width: 17%; margin-top: 1.1em; }
 h3 { width: 17%; line-height: 1.3em; }
 code { color: #666; }
 p code { left: -28%; width: 26%; text-align: right; }
+
+/* Preserve the CV colours when printing; browser/printer preferences take precedence. */
+body {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
